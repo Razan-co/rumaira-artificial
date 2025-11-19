@@ -1,0 +1,113 @@
+/* Page Layout */
+.confirmation-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+/* Confirmation Body */
+.confirmation-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Tick Circle */
+.check-circle {
+  width: 120px;
+  height: 120px;
+  background-color: #c8edc8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.checkmark {
+  color: green;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+/* Text */
+.confirmation-body h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.confirmation-body p {
+  color: #444;
+  font-size: 16px;
+}
+
+/* ---------- MEDIA QUERIES FOR RESPONSIVENESS ---------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .check-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .checkmark {
+    font-size: 42px;
+  }
+
+  .confirmation-body h2 {
+    font-size: 18px;
+  }
+
+  .confirmation-body p {
+    font-size: 15px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .check-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .checkmark {
+    font-size: 36px;
+  }
+
+  .confirmation-body h2 {
+    font-size: 16px;
+  }
+
+  .confirmation-body p {
+    font-size: 14px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .confirmation-page {
+    padding: 20px;
+  }
+
+  .check-circle {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 16px;
+  }
+
+  .checkmark {
+    font-size: 32px;
+  }
+
+  .confirmation-body h2 {
+    font-size: 15px;
+  }
+
+  .confirmation-body p {
+    font-size: 13px;
+  }
+}

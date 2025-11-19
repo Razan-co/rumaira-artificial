@@ -1,0 +1,413 @@
+.login-wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: white;
+  font-family: 'Inter', sans-serif; /* Adjusted font */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.login-image-container {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+}
+
+.login-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.wave {
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  height: 100px;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  margin-top: 5%;
+  text-align: center;
+  z-index: 1;
+  background-color: white;
+  border-radius: 12px 12px 0 0; 
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05); 
+}
+
+.login-form h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.login-form p {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #666;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column; 
+  gap: 15px;
+  margin: 20px 0;
+  align-items: center;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px; 
+  outline: none;
+  font-size: 16px; 
+  background-color: #f9f9f9;
+  color: black; 
+  caret-color: black; 
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #FFD700;
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2);
+}
+
+.input-group input::placeholder {
+  color: #aaa;
+}
+
+.terms {
+  font-size: 13px;
+  color: #999;
+  line-height: 1.5;
+}
+
+.otp-button {
+  background-color: #FFD700;
+  color: black;
+  border: none;
+  width: 100%;
+  padding: 12px 30px;
+  margin-top: 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 6px rgba(255, 215, 0, 0.3);
+}
+
+.otp-button:hover:not(:disabled) {
+  background-color: #e6c200;
+  box-shadow: 0 6px 8px rgba(255, 215, 0, 0.4);
+}
+
+.otp-button:disabled {
+  background-color: #ffeb99;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.tab-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px; /* Add some space below the tabs */
+    border-bottom: 1px solid #eee; /* Subtle separator */
+}
+
+.tab-button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #999; /* Default color for inactive tabs */
+    border: none;
+    border-bottom: 3px solid transparent; /* Placeholder for active indicator */
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    outline: none;
+}
+
+.tab-button:hover:not(.active) {
+    color: #666;
+}
+
+.tab-button.active {
+    color: black; /* Active tab text color */
+    border-bottom-color: #FFD700; /* Gold underline for the active tab */
+    font-weight: bold;
+}
+
+/* Adjust button margin for better look in small devices */
+@media (max-width: 480px) {
+    .tab-button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Media Queries (Responsive Design) */
+@media (max-width: 768px) {
+  .login-image-container {
+    height: 40vh;
+  }
+
+  .wave {
+    height: 80px;
+  }
+
+  .login-form {
+    padding: 20px;
+    margin-top: -5px;
+  }
+
+  .login-form h2 {
+    font-size: 22px;
+  }
+  
+  .input-group {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-wrapper {
+    padding: 0;
+  }
+
+  .login-image-container {
+    height: 35vh;
+  }
+
+  .wave {
+    height: 60px;
+  }
+
+  .login-form {
+    padding: 15px;
+    margin-top: -5px;
+    max-width: 100%;
+  }
+
+  .login-form h2 {
+    font-size: 20px;
+  }
+
+  .input-group {
+    margin: 15px 0;
+  }
+
+  .input-group input {
+    font-size: 15px;
+  }
+
+  .otp-button {
+    padding: 10px;
+    font-size: 15px;
+  }
+}
+
+/* .login-wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-image-container {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+
+.login-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.wave {
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  height: 100px;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  margin-top: -10px;
+  text-align: center;
+  z-index: 1;
+  background-color: white;
+}
+
+.login-form h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.login-form p {
+  font-size: 14px;
+  margin: 10px 0;
+  color: black;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.country-code {
+  padding: 10px 1px;
+  border: none;
+  border-bottom: 1px solid gray;
+  color: black;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  width: 45px;
+}
+
+.input-group input {
+  padding: 10px 5px;
+  border: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+  font-size: 16px; 
+  flex: 1;
+  background-color: white;
+  color: black; 
+  caret-color: black; 
+}
+
+.input-group input::placeholder {
+  color: #999;
+}
+
+.terms {
+  font-size: 13px;
+  color: black;
+}
+
+.otp-button {
+  background-color: #FFD700;
+  color: black;
+  border: none;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.otp-button:hover {
+  background-color: #e6c200;
+} */
+
+/* Medium Devices (Tablets, 768px and below) */
+/* @media (max-width: 768px) {
+  .login-image-container {
+    height: 40vh;
+  }
+
+  .login-image {
+    object-fit: cover;
+  }
+
+  .wave {
+    height: 80px;
+  }
+
+  .login-form {
+    padding: 15px;
+    margin-top: -5px;
+  }
+
+  .login-form h2 {
+    font-size: 20px;
+  }
+
+  .login-form p,
+  .terms {
+    font-size: 13px;
+  }
+
+  .input-group {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .otp-button {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+} */
+
+/* Small Devices (Mobiles, 480px and below) */
+/* @media (max-width: 480px) {
+  .login-wrapper {
+    padding: 10px;
+  }
+
+  .login-image-container {
+    height: 35vh;
+  }
+
+  .wave {
+    height: 60px;
+  }
+
+  .login-form {
+    padding: 10px;
+    margin-top: -5px;
+  }
+
+  .login-form h2 {
+    font-size: 18px;
+  }
+
+  .login-form p,
+  .terms {
+    font-size: 12px;
+  }
+
+  .country-code {
+    font-size: 13px;
+    width: 42px;
+  }
+
+  .input-group input {
+    font-size: 14px;
+  }
+
+  .otp-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 13px;
+  }
+} */

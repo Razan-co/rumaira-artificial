@@ -1,0 +1,124 @@
+.feedback-page {
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.feedback-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 15px 20px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Form */
+.feedback-form {
+  max-width: 600px;
+  margin: 30px auto;
+  background: transparent;
+  padding: 10px 20px 60px 20px;
+}
+
+.feedback-form label {
+  font-weight: 500;
+  margin-top: 15px;
+  display: block;
+  color: #333;
+}
+
+.radio-group,
+.rating-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.feedback-form input[type="radio"] {
+  margin-right: 5px;
+}
+
+.feedback-form textarea {
+  width: 100%;
+  min-height: 80px;
+  resize: vertical;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .feedback-form {
+    padding: 15px;
+  }
+
+  .header-title {
+    font-size: 1.3rem;
+  }
+
+  .submit-btn {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedback-form {
+    margin: 15px;
+    padding: 10px;
+  }
+
+  .feedback-form label {
+    font-size: 0.95rem;
+  }
+
+  .feedback-form textarea {
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    font-size: 0.9rem;
+  }
+}

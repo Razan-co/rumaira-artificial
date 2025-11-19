@@ -1,0 +1,106 @@
+/* Full-width wrapper */
+.nominee-wrapper {
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  padding-bottom: 80px;
+  font-family: 'Segoe UI', sans-serif;
+  width: 100vw;          
+  box-sizing: border-box;
+}
+
+/* Header */
+.nominee-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  width: 100%;             /* Full width */
+}
+
+.back-icon{
+    color: black;
+}
+
+/* Center align text properly */
+.header-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: black;
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Main form card full width with max limit for readability */
+.form-card {
+  background-color: white;
+  color: black;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 90%;              
+  max-width: 800px;    
+  box-sizing: border-box;
+}
+
+.form-desc{
+    font-weight: 600;
+}
+
+.radio-group {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+.radio-group input[type="radio"] {
+  accent-color: gold;
+  width: 16px;
+  height: 16px;
+}
+
+/* Acknowledgment Text */
+.ack-text {
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 1rem;
+  color: black;
+  font-weight: 600;
+  width: 100%;
+  margin-left: -5.5rem;
+}
+
+/* Bottom fixed bar */
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffd700;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.next-button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+}
+
+input.input-field,
+select.input-field {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  appearance: auto; 
+  background-color: white;
+  color: black;
+  box-sizing: border-box;
+}

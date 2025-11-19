@@ -1,0 +1,157 @@
+/* 🔹 Sidebar Base */
+.sidebar {
+  position: fixed;
+  inset: 0 0 0 0;
+  top: 0;
+  left: 0;
+  width: 240px;
+  background: #fff;
+  border-right: 1px solid #e5e7eb;
+  padding: 16px;
+  z-index: 50;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    position: static;
+    transform: translateX(0);
+    height: 100vh;
+  }
+}
+
+/* 🔹 Sidebar Title */
+.sidebar-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #008fab;
+  margin-bottom: 24px;
+}
+
+/* 🔹 Navigation Links */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* 🔹 Link Style */
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #374151;
+  font-size: 0.95rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-link:hover {
+  background: #f3f4f6;
+}
+
+.sidebar-link.active-link {
+  background: #cbf6ff;
+  color: #008fab;
+  font-weight: 600;
+}
+
+/* 🔹 Dropdown (Orders) */
+.sidebar-dropdown-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: none;
+  border: none;
+  color: #374151;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.sidebar-dropdown-btn:hover {
+  background: #f3f4f6;
+}
+
+.sidebar-dropdown-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chevron-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.sidebar-submenu {
+  margin-left: 24px;
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9rem;
+}
+
+/* 🔹 Mobile Navbar */
+.mobile-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  z-index: 100;
+}
+
+.menu-btn {
+  color: #374151;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-title {
+  margin-left: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #008fab;
+}
+
+@media (min-width: 768px) {
+  .mobile-navbar {
+    display: none;
+  }
+}
+
+/* 🔹 Close Button (Mobile) */
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #4b5563;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .close-btn {
+    display: none;
+  }
+}

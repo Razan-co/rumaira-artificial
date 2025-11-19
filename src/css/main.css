@@ -1,0 +1,194 @@
+/* homepage.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.carousel-full-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: #f4f3f6;
+}
+
+.carousel-image {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.carousel-image img.carousel-img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+ object-position: bottom center;
+  display: block;
+}
+
+.ring-slide {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #f4f3f6;
+}
+
+.ring {
+  position: absolute;
+  width: 240px;
+  height: 200px;
+  object-fit: contain;
+  opacity: 0;
+ animation: fallIn 0.8s ease-out forwards;
+
+}
+
+/* White ray light gradient at the bottom */
+/* White light ray gradient at the bottom */
+.white-light-ray {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.9), transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+/* Specific positions for rings */
+/* Updated layout with better spacing */
+.ring-1  { top: 5%;  left: 25%; animation-delay: 0.1s; }
+.ring-2  { top: 5%;  left: 50%; animation-delay: 0.2s; }
+
+.ring-3  { top: 15%; left: 5%; animation-delay: 0.3s; }
+.ring-4  { top: 13%; left: 68%; animation-delay: 0.4s; }
+
+.ring-5  { top: 40%; left: 8%; animation-delay: 0.5s; }
+.ring-6  { top: 35%; left: 80%; animation-delay: 0.6s; }
+
+.ring-7  { top: 35%; left: 25%; animation-delay: 0.7s; }
+.ring-8  { top: 35%; left: 60%; animation-delay: 0.8s; }
+
+.ring-9  { top: 50%; left: 70%; animation-delay: 0.9s; }
+.ring-10 { top: 60%; left: 55%; animation-delay: 1.0s; }
+
+.ring-11 { top: 62%; left: 25%; animation-delay: 1.1s; }
+
+
+
+@keyframes fallIn {
+  0% {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.carousel-bottom-card {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 20px 30px;
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  z-index: 10;
+  font-family: 'Sanchez', serif;
+}
+
+.carousel-bottom-card h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: lightgray;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  width: 30px;
+  background: #000;
+  border-radius: 10px;
+}
+
+.carousel-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skip-btn {
+  background: white;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+.next-btn {
+  background-color: #FFD700;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.center-logo-wrapper {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.center-logo {
+  width: 25rem;
+  height: 350px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ring {
+    width: 70px;
+    height: 70px;
+  }
+  .carousel-bottom-card h2 {
+    font-size: 1.5rem;
+  }
+  .skip-btn,
+  .next-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}

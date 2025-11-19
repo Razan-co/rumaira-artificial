@@ -1,0 +1,154 @@
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+  border-top: 1px solid #ccc;
+  padding: 8px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: grey;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.nav-item .icon {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+.nav-item.active {
+  color: gold; /* or #ffcc00 for crown */
+}
+
+.nav-item.active .icon {
+  color: black; /* optional: you can set special color per icon */
+}
+
+.nav-item:nth-child(3) .icon {
+  color: gold; 
+}
+
+/* ---------- RESPONSIVE MEDIA QUERIES FOR BOTTOM NAV ---------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .bottom-nav {
+    padding: 10px 0;
+  }
+
+  .nav-item {
+    font-size: 11px;
+  }
+
+  .nav-item .icon {
+    font-size: 20px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .bottom-nav {
+    padding: 10px 0;
+    flex-wrap: wrap;
+  }
+
+  .nav-item {
+    font-size: 10px;
+  }
+
+  .nav-item .icon {
+    font-size: 18px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .bottom-nav {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 6px 0;
+  }
+
+  .nav-item {
+    font-size: 9px;
+  }
+
+  .nav-item .icon {
+    font-size: 16px;
+  }
+}
+
+/* ---------- MEDIA QUERIES FOR RESPONSIVENESS ---------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .check-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .checkmark {
+    font-size: 42px;
+  }
+
+  .confirmation-body h2 {
+    font-size: 18px;
+  }
+
+  .confirmation-body p {
+    font-size: 15px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .check-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .checkmark {
+    font-size: 36px;
+  }
+
+  .confirmation-body h2 {
+    font-size: 16px;
+  }
+
+  .confirmation-body p {
+    font-size: 14px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .confirmation-page {
+    padding: 20px;
+  }
+
+  .check-circle {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 16px;
+  }
+
+  .checkmark {
+    font-size: 32px;
+  }
+
+  .confirmation-body h2 {
+    font-size: 15px;
+  }
+
+  .confirmation-body p {
+    font-size: 13px;
+  }
+}

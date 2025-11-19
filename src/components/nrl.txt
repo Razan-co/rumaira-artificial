@@ -1,0 +1,52 @@
+this is category for frontend
+<div className="category-slider" data-aos="fade-up">
+  {[
+    { name: "Rings", img: "/assets/ring.png", path: "/rings" },
+    { name: "Pendants", img: "/assets/pendant.png", path: "/pendants" },
+    { name: "Earrings", img: "/assets/earring.png", path: "/earrings" }
+  ].map((item, i) => (
+    <div className="category-card" key={i} onClick={() => navigate(item.path)}>
+      <div className="card-image-section">
+        <img src={item.img} alt={item.name} />
+      </div>
+      <div className="card-label-section">
+        {item.name}
+      </div>
+    </div>
+  ))}
+</div>
+
+this is backend api for category http://localhost:5000/api/categories/
+
+make zustand for this category store
+
+
+// new arrivals
+this is frontend for new arrivals
+
+      <div className="product-section" data-aos="fade-up">
+  <h3 className="section-title">New Arrivals</h3>
+  <div className="product-row">
+    {[
+      { name: "The Eternal Two Diamond Ring", img: "/assets/ring1.png", price: "13,971" },
+      { name: "Synthetic Sapphire Ring with Diamond", img: "/assets/ring2.png", price: "13,971" },
+        { name: "The Eternal Two Diamond Ring", img: "/assets/ring1.png", price: "13,971" },
+      { name: "Synthetic Sapphire Ring with Diamond", img: "/assets/ring2.png", price: "13,971" }
+    ].map((item, i) => (
+      <div className="product-card" key={i}>
+   <div className="wishlist-icon">
+  <i className="far fa-heart"></i>
+</div>
+
+        <img src={item.img} alt={item.name} />
+        <div className="product-details">
+          <p className="product-name">{item.name}</p>
+          <p className="product-price">₹ {item.price}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+this is backend api for new arrivals  http://localhost:5000/api/product/new-arrivals
+make the zustand for the new arrivals in same category store

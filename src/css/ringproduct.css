@@ -1,0 +1,104 @@
+.ring-detail-page {
+  font-family: sans-serif;
+  padding: 1rem;
+  background: #f8f8f8;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.icons span,
+.cart-icon {
+  font-size: 1.3rem;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.preview-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.main-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.main-ring-image {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  background: white;
+}
+
+.scan-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: #555;
+  background: #fff;
+  padding: 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.thumb {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  cursor: pointer;
+  background: white;
+  padding: 4px;
+}
+
+.thumb.active {
+  border-color: #ccc;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.cart-btn {
+ background-color:  #ffffff ;
+  color: #000;
+  border: none;
+  padding: 6px 14px;
+  margin-top: 10px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid #ffd700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-btn:hover{
+   background-color: #ffd700;
+}
+.scan-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer; /* <- this is important */
+  color: #888;
+}

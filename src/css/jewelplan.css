@@ -1,0 +1,238 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  width: 100%;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Main wrapper */
+.jewel-wrapper {
+  background-color: #f6ebdc;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding-bottom: 80px;
+}
+
+/* Header */
+.jewel-header {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-arrow {
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  color: black;
+  margin: 0.25rem;
+}
+
+.jewel-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: black;
+  margin-left: 1rem;
+  margin-top: -0.25rem;
+}
+
+/* Top section with image and form */
+.top-section {
+  background-color: #e9d2b6;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.left-box {
+  display: flex;
+  justify-content: center;
+}
+
+.left-box .gem-image {
+  width: 80%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.right-box {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.input-box {
+  padding: 0.7rem;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.start-button {
+  padding: 0.7rem;
+  background-color: #8a5a2f;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.help-text {
+  font-size: 0.8rem;
+  text-align: center;
+  color: gray;
+}
+
+/* Discount box */
+.discount-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #8a5a2f;
+}
+
+/* Info boxes */
+.info-section {
+  background-color: white;
+  margin: 1rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.info-section h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  text-align: center;
+  color: black;
+}
+
+.info-section ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Steps Section */
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.step-item {
+  font-size: 0.95rem;
+  text-align: center;
+  max-width: 200px;
+}
+
+.step-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  margin-left: -5rem;
+}
+
+.step-icon img {
+  height: 5rem;
+  width: 5rem;
+}
+
+.content {
+  color: black;
+  font-weight: bold;
+  margin-left: -4rem;
+  margin-top: -1rem;
+}
+
+/* Responsive for wider screens */
+@media (min-width: 768px) {
+  .top-section {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .steps {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .info-section {
+    margin: 3rem 7rem;
+  }
+}
+
+/* Footer links */
+.footer-links {
+  text-align: center;
+  color: #a1682e;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.footer-links p {
+  margin: 0.25rem 0;
+  cursor: pointer;
+}
+
+/* Bottom nav */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem 0;
+  z-index: 100;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.75rem;
+}
+
+.nav-item.active {
+  color: #a1682e;
+  font-weight: bold;
+}
+
+.plan-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  color: black;
+}
+
+.plan-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}

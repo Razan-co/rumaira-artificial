@@ -1,0 +1,102 @@
+/* Background and layout */
+.contact-container {
+  background-image: url('/assets/contact.png'); /* Use your jewelry image */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Card styling */
+.contact-card {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+.contact-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.back-btn {
+    margin-top: 10px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.contact-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+/* Form layout */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.name-fields {
+  display: flex;
+  gap: 15px;
+}
+
+.name-fields div {
+  flex: 1;
+}
+
+/* Inputs */
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #777;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* Button */
+.send-btn {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.send-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Success message */
+.success {
+  color: green;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .name-fields {
+    flex-direction: column;
+  }
+
+  .contact-card {
+    padding: 20px;
+  }
+}

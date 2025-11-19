@@ -1,0 +1,161 @@
+/* Main container */
+.schemes-page {
+  background-color: #f5f5f5;
+  padding: 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Header */
+.schemes-header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  margin: 0px;
+  border-radius: 5px;
+}
+
+.schemes-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.back-icon {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+ /* /* Grid layout */
+.scheme-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin: 20px;
+  padding: 0px;
+} 
+
+/* White wrapper simulating border */
+.scheme-wrapper {
+  background-color: #ffffff;
+  padding: 20px; /* space around the yellow button */
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px; /* set a consistent height */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Yellow card inside */
+/* .scheme-card {
+  background-color: #ffcc00;
+  color: black;
+  font-weight: 600;
+  padding: 80px ;
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+} */
+
+/* .scheme-card:hover {
+  transform: translateY(-3px);
+} */
+.schemes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.scheme-button {
+ 
+  background-color: #ffcc00;
+  border: none;
+  padding: 20px 30px;
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+    
+
+
+.scheme-button:hover {
+  transform: scale(1.03);
+}
+
+/* ---------------- MEDIA QUERIES ---------------- */
+
+/* Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  .scheme-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 16px;
+  }
+
+  .scheme-button {
+    font-size: 15px;
+    padding: 18px 20px;
+  }
+}
+
+/* Mobile Devices (≤ 768px) */
+@media (max-width: 768px) {
+  .schemes-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .scheme-grid {
+    grid-template-columns: 1fr;
+    margin: 10px;
+    gap: 20px;
+  }
+
+  .scheme-wrapper {
+    height: 130px;
+    padding: 16px;
+  }
+
+  .scheme-button {
+    font-size: 14px;
+    padding: 16px 18px;
+  }
+}
+
+/* Small Phones (≤ 480px) */
+@media (max-width: 480px) {
+  .schemes-page {
+    padding: 16px 10px;
+  }
+
+  .schemes-header {
+    padding: 12px;
+  }
+
+  .schemes-header h2 {
+    font-size: 18px;
+  }
+
+  .back-icon {
+    font-size: 16px;
+  }
+
+  .scheme-wrapper {
+    height: 120px;
+    padding: 12px;
+  }
+
+  .scheme-button {
+    font-size: 13.5px;
+    padding: 14px 16px;
+  }
+}

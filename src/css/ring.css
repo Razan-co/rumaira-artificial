@@ -1,0 +1,222 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+
+background-color: #fff;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 10px;
+}
+.rings-page {
+  padding: 20px;
+  /* background: #f4f4f4; */
+  font-family: 'Segoe UI', sans-serif;
+   height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0px;
+  padding: 0px;
+}
+
+.rings-header {
+ display: flex;
+  align-items: center;
+  padding: 5px;
+  background-color: white;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  margin: 0px;
+  border-radius: 10px;
+  
+}
+
+.back-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.ring-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.ring-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: relative;
+  padding: 10px;
+  text-align: center;
+  margin: 40px;
+  
+}
+
+.ring-image {
+  max-width: 100%;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.ring-info h4 {
+  font-size: 1rem;
+  margin: 0;
+  color: #333;
+  cursor: pointer;
+}
+
+.ring-info p {
+  color: #111;
+  font-weight: bold;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.wishlist-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+
+.ring-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+  background-color: white;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.add-to-cart  {
+  background-color:  #ffffff ;
+  color: #000;
+  border: none;
+  padding: 6px 14px;
+  margin-top: 10px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid #ffd700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #ffd700;
+}
+
+/* ------------------- RESPONSIVE MEDIA QUERIES ------------------- */
+
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .ring-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .ring-card {
+    margin: 20px;
+  }
+
+  .ring-image {
+    height: 130px;
+  }
+
+  .ring-info h4 {
+    font-size: 0.95rem;
+  }
+
+  .add-to-cart {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .rings-page {
+    padding: 10px;
+  }
+
+  .ring-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .ring-card {
+    margin: 10px;
+    padding: 12px;
+  }
+
+  .ring-image {
+    height: 120px;
+  }
+
+  .ring-info h4 {
+    font-size: 1rem;
+  }
+
+  .ring-info p {
+    font-size: 0.9rem;
+  }
+
+  .add-to-cart {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .wishlist-icon {
+    font-size: 1.4rem;
+  }
+
+  .ring-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+/* Small phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .ring-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .ring-card {
+    padding: 10px;
+    margin: 8px;
+  }
+
+  .ring-image {
+    height: 100px;
+  }
+
+  .ring-info h4 {
+    font-size: 0.9rem;
+  }
+
+  .ring-info p {
+    font-size: 0.85rem;
+  }
+
+  .add-to-cart {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .back-icon,
+  .header-icon {
+    font-size: 1.2rem;
+  }
+
+  .jewel-title {
+    font-size: 1.2rem;
+  }
+}

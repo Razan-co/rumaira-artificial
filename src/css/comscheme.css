@@ -1,0 +1,166 @@
+/* Page background */
+.golden-page {
+  background-color: #f2f2f2;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Header style */
+.golden-header {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.back-icon {
+  font-size: 18px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.golden-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Main card */
+.plan-card {
+  background-color: #fff;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  overflow: hidden;
+  border: 1px solid white;
+}
+
+.plan-title {
+  background-color: #ffcc00;
+  font-weight: bold;
+  padding: 16px;
+  text-align: left;
+  font-size: 16px;
+  margin: 5px;
+}
+
+.plan-detail {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+  margin: 15px;
+}
+
+/* Terms section */
+.terms-box {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px;
+  margin: 10px 0;
+  /* border-left: 5px solid green; */
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.check-icon {
+  color: green;
+}
+
+/* ---------------- MEDIA QUERIES ---------------- */
+
+/* Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  .plan-card {
+    padding: 16px;
+  }
+
+  .plan-title {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .plan-detail {
+    font-size: 13px;
+    margin: 12px;
+    padding: 8px;
+  }
+
+  .terms-box {
+    font-size: 13px;
+    padding: 12px;
+  }
+
+  .check-icon {
+    font-size: 16px;
+  }
+}
+
+/* Mobile Devices (≤ 768px) */
+@media (max-width: 768px) {
+  .golden-page {
+    padding: 16px;
+  }
+
+  .plan-card {
+    margin: 20px 0;
+  }
+
+  .plan-title {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .plan-detail {
+    font-size: 12.5px;
+    margin: 10px;
+  }
+
+  .terms-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .check-icon {
+    font-size: 14px;
+  }
+}
+
+/* Small Phones (≤ 480px) */
+@media (max-width: 480px) {
+  .golden-page {
+    padding: 12px;
+  }
+
+  .plan-title {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .plan-detail {
+    font-size: 12px;
+    padding: 6px;
+    margin: 8px;
+  }
+
+  .terms-box {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .back-icon {
+    font-size: 16px;
+  }
+
+  .jewel-header h1 {
+    font-size: 18px;
+  }
+}

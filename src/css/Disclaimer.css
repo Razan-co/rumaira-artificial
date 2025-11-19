@@ -1,0 +1,100 @@
+/* Overall Page */
+.disclaimer-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  font-family: "Inter", sans-serif;
+  color: #333;
+}
+
+/* Header Section */
+.disclaimer-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 10px 30px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #222;
+  transition: transform 0.2s ease;
+}
+
+.back-btn:hover {
+  transform: translateX(-3px);
+}
+
+.header-title {
+    padding-top: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Body Section */
+.disclaimer-body {
+  flex: 1;
+  padding: 50px;
+  max-width: full;
+  margin: 0 auto;
+}
+
+.disclaimer-body h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.disclaimer-body p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #555;
+  text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 1.3rem;
+  }
+
+  .disclaimer-body {
+    padding: 20px;
+  }
+
+  .disclaimer-body h3 {
+    font-size: 1.1rem;
+  }
+
+  .disclaimer-body p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 1.2rem;
+  }
+
+  .disclaimer-body {
+    padding: 15px;
+  }
+
+  .disclaimer-body p {
+    font-size: 0.9rem;
+  }
+}

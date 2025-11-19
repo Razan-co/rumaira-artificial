@@ -1,0 +1,169 @@
+.wishlist-page {
+  padding: 40px 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.wishlist-title {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 7 0px;
+  color: #333;
+}
+
+.empty-text {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+  margin-top: 60px;
+}
+
+.wishlist-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 200px;
+  margin-top: 30px;
+}
+
+.wishlist-card {
+  display: flex;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  width: 90%;
+  max-width: 700px;
+  padding: 20px;
+  gap: 70px;
+  align-items: center;
+}
+
+.wishlist-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.wishlist-info {
+  flex: 1;
+}
+
+.wishlist-info h4 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.wishlist-info p {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.wishlist-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.wishlist-buttons button {
+  background-color:  #ffffff ;
+  color: #000;
+  border: none;
+  padding: 10px 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid #ffd700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.wishlist-buttons button:hover {
+  background-color: #ffd700;
+}
+
+/* ------------------ RESPONSIVE MEDIA QUERIES ------------------ */
+
+/* Tablets (max-width: 991px) */
+@media (max-width: 991px) {
+  .wishlist-page {
+    padding: 30px 15px;
+  }
+
+  .wishlist-card {
+    gap: 40px;
+    padding: 16px;
+  }
+
+  .wishlist-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .wishlist-info h4 {
+    font-size: 18px;
+  }
+
+  .wishlist-info p {
+    font-size: 16px;
+  }
+
+  .wishlist-buttons button {
+    padding: 8px 14px;
+    font-size: 15px;
+  }
+}
+
+/* Mobile Devices (max-width: 600px) */
+@media (max-width: 600px) {
+  .wishlist-page {
+    padding: 20px 10px;
+  }
+
+  .jewel-title {
+    font-size: 24px;
+  }
+
+  .wishlist-container {
+    gap: 60px;
+    margin-top: 20px;
+  }
+
+  .wishlist-card {
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    padding: 14px;
+  }
+
+  .wishlist-image {
+    width: 90px;
+    height: 90px;
+  }
+
+  .wishlist-info h4 {
+    font-size: 17px;
+  }
+
+  .wishlist-info p {
+    font-size: 15px;
+  }
+
+  .wishlist-buttons {
+    justify-content: center;
+  }
+
+  .wishlist-buttons button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .empty-text {
+    font-size: 16px;
+  }
+}
