@@ -1,35 +1,42 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { useAuthStore } from "../store/useAuthStore";
 import { toast } from "react-hot-toast";
 import "../css/LoginSignup.css";
 
 export default function LoginSignup() {
   const navigate = useNavigate();
-  const { isLoggingIn, isCreatingUser, error, login, createUser,clearError } = useAuthStore();
+  const {
+    isLoggingIn,
+    isCreatingUser,
+    error,
+    login,
+    createUser,
+    clearError,
+  } = useAuthStore();
 
-  const [tab, setTab] = useState("login");
-
-  // State objects for login and signup data
-  const [loginData, setLoginData] = useState({
-    email: "",
-    password: ""
-  });
-
+  const [params, setParams] = useSearchParams();
+const tab = params.get("tab") || "login";
+  const [loginData, setLoginData] = useState({ email: "", password: "" });
   const [signUpData, setSignUpData] = useState({
     name: "",
     email: "",
-    password: ""
+    password: "",
   });
 
   const loading = tab === "login" ? isLoggingIn : isCreatingUser;
 
- const handleSwitchMode = (activeTab) => {
-  setTab(activeTab);
+const handleSwitchMode = (mode) => {
+  // console.log("Switching mode:", mode);
+
+  setParams({ tab: mode });
+
   setLoginData({ email: "", password: "" });
   setSignUpData({ name: "", email: "", password: "" });
+
   clearError();
 };
+
 
   const handleLoginChange = (e) => {
     const { name, value } = e.target;
@@ -50,26 +57,28 @@ export default function LoginSignup() {
     }
     const res = await login(loginData);
     if (res?.success) {
+      toast.success("Logged in successfully!");
       navigate("/");
     }
   };
-
-  useEffect(() => {
-  console.log("TAB CHANGED →", tab);
-}, [tab]);
 
   const handleSignUpSubmit = async (e) => {
     e.preventDefault();
     if (loading) return;
     if (!signUpData.name || !signUpData.email || !signUpData.password) {
-      toast.error("Please enter your name, email, and password.");
+      toast.error("Please enter all fields.");
       return;
     }
     const res = await createUser(signUpData);
     if (res?.success) {
+      toast.success("Account created successfully!");
       navigate("/");
     }
   };
+
+  useEffect(() => {
+    // console.log("TAB CHANGED →", tab);
+  }, [tab]);
 
   return (
     <div className="login-wrapper">
@@ -79,7 +88,7 @@ export default function LoginSignup() {
           <path
             d="M0.00,49.98 C150.00,150.00 350.00,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
             style={{ stroke: "none", fill: "#fff" }}
-          ></path>
+          />
         </svg>
       </div>
 
@@ -92,11 +101,10 @@ export default function LoginSignup() {
           >
             Login
           </button>
-
           <button
             type="button"
-            className={`tab-button ${tab === "signUp" ? "active" : ""}`}
-            onClick={() => handleSwitchMode("signUp")}
+            className={`tab-button ${tab === "signup" ? "active" : ""}`}
+            onClick={() => handleSwitchMode("signup")}
           >
             Sign Up
           </button>
@@ -106,7 +114,6 @@ export default function LoginSignup() {
           <>
             <h2>Login</h2>
             <p>Enter your email and password to log in</p>
-
             <form onSubmit={handleLoginSubmit}>
               <div className="input-group">
                 <input
@@ -117,8 +124,6 @@ export default function LoginSignup() {
                   onChange={handleLoginChange}
                   required
                 />
-              </div>
-              <div className="input-group">
                 <input
                   type="password"
                   name="password"
@@ -128,15 +133,11 @@ export default function LoginSignup() {
                   required
                 />
               </div>
-              {error && (
-                <p style={{ color: "red", fontSize: "13px", margin: "5px 0" }}>{error}</p>
-              )}
-
+              {error && <p className="error-text">{error}</p>}
               <p className="terms">
                 By continuing, I agree to <strong>Terms of use</strong> & <br />
                 <strong>Privacy Policy</strong>
               </p>
-
               <button type="submit" className="otp-button" disabled={loading}>
                 {loading ? "Logging In..." : "Login"}
               </button>
@@ -144,7 +145,7 @@ export default function LoginSignup() {
           </>
         )}
 
-        {tab === "signUp" && (
+        {tab === "signup" && (
           <>
             <h2>Sign Up</h2>
             <p>Enter your details to create an account</p>
@@ -158,8 +159,6 @@ export default function LoginSignup() {
                   onChange={handleSignUpChange}
                   required
                 />
-              </div>
-              <div className="input-group">
                 <input
                   type="email"
                   name="email"
@@ -168,8 +167,6 @@ export default function LoginSignup() {
                   onChange={handleSignUpChange}
                   required
                 />
-              </div>
-              <div className="input-group">
                 <input
                   type="password"
                   name="password"
@@ -179,15 +176,11 @@ export default function LoginSignup() {
                   required
                 />
               </div>
-              {error && (
-                <p style={{ color: "red", fontSize: "13px", margin: "5px 0" }}>{error}</p>
-              )}
-
+              {error && <p className="error-text">{error}</p>}
               <p className="terms">
                 By continuing, I agree to <strong>Terms of use</strong> & <br />
                 <strong>Privacy Policy</strong>
               </p>
-
               <button type="submit" className="otp-button" disabled={loading}>
                 {loading ? "Signing Up..." : "Sign Up"}
               </button>
